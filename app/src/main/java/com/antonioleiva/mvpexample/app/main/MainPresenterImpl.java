@@ -23,16 +23,16 @@ import java.util.List;
 public class MainPresenterImpl implements MainPresenter, OnFinishedListener {
 
     private MainView mainView;
-    private FindItemsInteractor findItemsInteractor;
+    private FindItemsManager findItemsManager;
 
     public MainPresenterImpl(MainView mainView) {
         this.mainView = mainView;
-        findItemsInteractor = new FindItemsInteractorImpl();
+        findItemsManager = new FindItemsManagerImpl();
     }
 
     @Override public void onResume() {
         mainView.showProgress();
-        findItemsInteractor.findItems(this);
+        findItemsManager.findItems(this);
     }
 
     @Override public void onItemClicked(int position) {

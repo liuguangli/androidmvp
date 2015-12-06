@@ -3,7 +3,7 @@ package com.antonioleiva.mvpexample.app.Login;
 import android.os.Handler;
 import android.text.TextUtils;
 
-public class LoginInteractorImpl implements LoginInteractor {
+public class LoginManagerImpl implements LoginManager {
 
     @Override
     public void login(final String username, final String password, final OnLoginFinishedListener listener) {
